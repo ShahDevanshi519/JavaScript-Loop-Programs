@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Of N Numbers</title>
+</head>
+<body>
+    <form>
+        Enter Number:<input type="text" id="num"><br><br>
+        <button type="button" onclick="handle()">Click Me</button>
+    </form>
+    <div id="root"></div>
+    <script>
+        function handle(){
+            let num = Number(document.getElementById("num").value);
+            let sum = 0;
+
+            for(let i=1;i<=num;i++){
+                 sum = sum + i;
+            }
+
+            document.getElementById("root").innerText = "Sum Of N Number Is = " + sum;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N To 1</title>
+</head>
+<body>
+    <form>
+        Enter Number:<input type="text" id="num"><br><br>
+        <button type="button" onclick="handle()">Click Me</button>
+    </form>
+    <div id="root"></div>
+    <script>
+        function handle(){
+            let num = Number(document.getElementById("num").value);
+
+            for(let i = num ; i > 0 ; i--){
+                document.getElementById("root").innerText += " " + i + " ";
+            }
+        }
+    </script>
+</body>
+</html>

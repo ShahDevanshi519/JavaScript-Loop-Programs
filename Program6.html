@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body>
+    <form>
+        Enter Number:<input type="text" id="num"><br><br>
+        <button type="button" onclick="handlePrime()">Click Me</button>
+    </form>
+    <div id="root"></div>
+    <script>
+        function handlePrime(){
+            let num = Number(document.getElementById("num").value);
+            let isPrime = true;
+
+            if(num <= 0){
+                document.getElementById("root").innerText = "Number Is Negative";
+            }else if(num === 1){
+                document.getElementById("root").innerText = "1 Is Not Prime Number";
+            }else{
+                for(let i = 2; i<num ; i++){
+                    if(num % i === 0){
+                        isPrime = false;
+                        break;
+                    }
+                }
+
+                if(isPrime){
+                    document.getElementById("root").innerText = "Prime Number!";
+                }else{
+                    document.getElementById("root").innerText = "Not Prime Number!";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

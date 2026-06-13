@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime between range</title>
+</head>
+<body>
+    <form>
+        Enter Starting Number:<input type="text" id="snumber"><br><br>
+        Enter Ending Number:<input type="text" id="enumber"><br><br>
+        <button type="button" onclick="handleprime()">Click Me</button>
+    </form> 
+    <div id="root"></div>
+    <script>
+        function handleprime(){
+            let snumber = Number(document.getElementById("snumber").value);
+            let enumber = Number(document.getElementById("enumber").value);
+
+            for(let num = snumber ; num <=enumber ; num++){
+                let isPrime = true;
+
+                if(num < 2){
+                    isPrime = false;
+                }
+                else{
+                    for(let i=2; i<num ;i++){
+                        if(num % i === 0){
+                            isPrime = false;
+                            break;
+                        }   
+                    }
+                }
+
+                if(isPrime){
+                    document.getElementById("root").innerText += " " + num + " ";
+                }
+            }
+
+        
+        }
+    </script>
+</body>
+</html>

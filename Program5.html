@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Serise</title>
+</head>
+<body>
+    <form>
+        Enter Number:<input type="text" id="num"><br><br>
+        <button type="button" onclick="handlefibo()">click me</button>
+    </form>
+    <div id="root"></div>
+    <script>
+        function handlefibo(){
+            let num = Number(document.getElementById("num").value);
+
+            let a = 0 , b = 1;
+            let sum = 0;
+
+            document.getElementById("root").innerText = a + " " + b + " ";
+
+            for(let i=2;i<num;i++){
+                sum = a + b;
+                a = b;
+                b = sum;
+
+                document.getElementById("root").innerText += " " + sum + " ";
+            }
+        }
+    </script>
+</body>
+</html>

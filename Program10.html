@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Digits</title>
+</head>
+<body>
+    <form>
+        Enter Number:<input type="text" id="num"><br><br>
+        <button type="button" onclick="handlecount()">click me</button>
+    </form>
+    <div id="root"></div>
+    <script>
+        function handlecount(){
+            let num = document.getElementById("num").value;
+
+            let count = 0;
+
+            for(let i = 0;i<num.length;i++){
+                count = count + 1;
+            }
+
+            document.getElementById("root").innerText = count;
+        }
+    </script>
+</body>
+</html>

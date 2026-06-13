@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Number</title>
+</head>
+<body>
+    <form>
+        Enter Number:<input type="text" id="num"><br><br>
+        <button type="button" onclick="handlefact()">Click Me</button>
+    </form>
+    <div id="root"></div>
+    <script>
+        function handlefact(){
+            let num = Number(document.getElementById("num").value);
+            let fact = 1;
+
+            for(let i=num;i>0;i--){
+                fact = fact * i;
+            }
+
+            document.getElementById("root").innerText = "The Factorial of number is = " + fact;
+        }
+    </script>
+</body>
+</html>
