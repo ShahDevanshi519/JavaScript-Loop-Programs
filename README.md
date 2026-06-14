@@ -14,6 +14,11 @@ This repository contains beginner-friendly JavaScript programs based on loops an
 8. Armstrong Number
 9. Sum of Digits
 10. Count Digits
+11. Reverse Number
+12. Palindrom Number
+13. Product Of Digits
+14. Count Even Digits
+15. Count Odd Digits
 
 ## Concepts Covered
 
