@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Of DIgits</title>
+</head>
+<body>
+    <form>
+        Enter Number:<input type="text" id="num"><br><br>
+        <button type="button" onclick="handleproduct()">Click Me</button>
+    </form>
+    <div id="root"></div>
+    <script>
+        function handleproduct(){
+            let num = Number(document.getElementById("num").value);
+            let productnum = 1;
+
+            while(num > 0){
+                let digits = num % 10;
+                productnum = productnum * digits;
+                num = Math.floor(num / 10);
+            }
+
+            document.getElementById("root").innerText = productnum;
+        }
+    </script>
+</body>
+</html>
